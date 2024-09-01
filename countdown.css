@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.top{
+    top:40%;
+}
+
+h1 {
+    margin-top: 3rem;
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 0 1rem;
+    border-bottom: 2px solid #1a1a1a;
+    background: linear-gradient(90deg, #7ed0d2, #25989a,#0b7a7c);
+    -webkit-background-clip: text;
+    animation: animate 5s linear ease-in-out;
+    -webkit-text-fill-color: transparent;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    width: 80%;
+    height: 9rem;
+    color: #fff;
+    background-color: #1a1a1a;
+    position: relative;
+    border-radius: 1rem;
+    font-size: 4rem;
+    overflow: hidden;
+}
+
+.clock p {
+    font-size: 1rem;
+}
+
+.clock::before {
+    content: "";
+    position: absolute; 
+    top: -50%;
+    left: -50%;
+    width: 90%;
+    height: 8rem;
+    background: linear-gradient(0deg, transparent, transparent, #19fcbf, #00dbde, #03be6d);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite; 
+}
+
+.clock::after{
+    content: "";
+    position:absolute;
+    top: -50%;
+    left: -50%;
+    width: 90%;
+    height: 8rem;
+    background: linear-gradient(0deg, transparent,transparent,#7ed0d2, #25989a,#026567);
+    z-index:0;
+    transform-origin: bottom right;
+    animation: animate 5s linear infinite;
+    animation-delay: -3s;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.front-clock{
+    text-align: center;
+    padding-top:.6rem;
+    background-color: #0d0d0d;
+    width:95%;
+    height:95%;
+    border-radius: 2rem;
+    z-index:1;
+}
+
